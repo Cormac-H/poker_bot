@@ -53,7 +53,7 @@ class Deck //Class for a tasklist
 {
 private:
     std::vector<pair<Card, bool>> deck; //Each task has a name, due date, and type
-    
+    int remainingCards;
 public:
     // constructor
     Deck(){
@@ -70,9 +70,13 @@ public:
             deck.push_back(make_pair(clubs, false));
             deck.push_back(make_pair(diamonds, false));
         }
+
+        remainingCards = 52;
     }
 
     auto getDeck(){return deck;}
+
+    auto getRemainingCards(){return remainingCards;}
 
 };
 
