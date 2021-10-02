@@ -1,3 +1,5 @@
+#ifndef DECK
+#define DECK
 #include <iostream>
 #include <tuple>
 #include <vector>
@@ -79,3 +81,4 @@ public:
 };
 
 
+#endif

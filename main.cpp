@@ -6,7 +6,7 @@
 #include <ctime> 
 #include <algorithm>
 
-#include "Deck.hpp"
+#include "Deck.h"
 #include "Equity.cpp"
 
 using namespace std;
@@ -64,15 +64,18 @@ int main() {
 
     //Print Hands
     cout << "Player Hand: ";
-    for(auto i : playerHand){
-        cout << i.toString() << " ";
+    for(int i = 0; i < playerHand.size()-1; i++){
+        cout << playerHand[i].toString() << ", ";
     }
+
+    cout << playerHand[playerHand.size()-1].toString();
+    cout << endl;
 
     cout << endl << "Table Cards: ";
-    for(auto i : tableCards){
-        cout << i.toString() << " ";
+    for(int i = 0; i < tableCards.size()-1; i++){
+        cout << tableCards[i].toString() << ", ";
     }
-
+    cout << tableCards[tableCards.size()-1].toString();
     cout << endl << endl;
 
 
