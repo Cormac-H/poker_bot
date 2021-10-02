@@ -6,16 +6,16 @@
 #include <ctime> 
 #include <algorithm>
 
-#include "Deck.h"
+#include "Deck.hpp"
 #include "Equity.cpp"
 
 using namespace std;
 
-int PLAYER_HAND_SIZE = 2;
-int PREFLOP = 0;
-int FLOP = 3;
-int TURN = 4;
-int RIVER = 5;
+const int PLAYER_HAND_SIZE = 2;
+//const int PREFLOP = 0;
+const int FLOP = 3;
+const int TURN = 4;
+const int RIVER = 5;
 
 
 int main() {
@@ -80,7 +80,7 @@ int main() {
     cout << "         Card Equities" << endl;
     cout << "==========================" << endl;
     cout << "Pair:            |  " << pairOdds(currentDeck, playerHand, tableCards) << endl;
-    // cout << "Two Pair:        |  " << twoPairOdds(currentDeck, playerHand, tableCards) << endl;
+    cout << "Two Pair:        |  " << twoPairOdds(currentDeck, playerHand, tableCards) << endl;
     // cout << "Three of a Kind: |  " << threeOfAKindOdds(currentDeck, playerHand, tableCards) << endl;
     // cout << "Straight:        |  " << straightOdds(currentDeck, playerHand, tableCards) << endl;
     // cout << "Flush:           |  " << flushOdds(currentDeck, playerHand, tableCards) << endl;
